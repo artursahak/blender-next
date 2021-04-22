@@ -1,0 +1,7 @@
+streamlit==0.80.0
+tensorflow
+tensorflow-hub
+pillow==6.2.2
+matplotlib
+numpy
+google-cloud-storage

@@ -1,0 +1,38 @@
+1. command from email
+
+source \
+ ~/envs/hello_world/bin/activate
+
+gcloud config set project blender-next
+
+ln -s /home/artursahak99/blender/blender /usr/local/bin/blender
+
+sudo rm /usr/local/bin/blender
+
+streamlit run  --server.port 8080  --server.enableCORS false --server.enableXsrfProtection=false app.py
+
+sudo cp /home/artursahak99/blender-2.79-linux-glibc219-x86_64  /usr/local/bin/blender
+
+wget https://mirror.clarkson.edu/blender/release/Blender2.82/blender-2.82-linux64.tar.xz
+tar -xf blender-2.79-linux-glibc219-x86_64.tar.bz2
+
+gcloud config set app/cloud_build_timeout 6000
+
+gcloud run deploy --image gcr.io/cloud-builders/docker@sha256:48b8f20f4c7b638df5c40f6dac34d3ce35db5b5dc7264567bde29232568d3a1b --timeout=1600s
+
+https://blender-next.ew.r.appspot.com
+
+gcloud alpha run cloud-shell scp cloudshell:~/data.txt localhost:~data.txt
+
+gcloud alpha scp cloudshell:~/home/artursahak99/ localhost:~/home/artursahak99/
+
+gcloud alpha cloud-shell ssh
+
+gs://blender-next.appspot.com// 
+
+
+
+sudo mkdir /usr/local/bin/blender && \
+	curl -SL "https://mirror.clarkson.edu/blender/release/Blender2.82/blender-2.82-linux64.tar.xz" -o blender.tar.xz && \
+	tar -xf blender.tar.xz -C /usr/local/bin/blender --strip-components=1 && \
+	rm blender.tar.xz
